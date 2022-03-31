@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/rolands_varsbergs_bg"
-    >
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
   <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
       android:orientation="vertical"
+      android:background="@drawable/rolands_varsbergs_bg"
       >
+
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -48,22 +50,26 @@
           android:id="@+id/button_login"
           android:layout_width="168dp"
           android:layout_height="53dp"
-          android:layout_marginRight="10dp"
+          android:layout_marginRight="2.5dp"
           android:layout_gravity="bottom"
+          android:layout_marginBottom="10dp"
           android:text="Log In"
-          android:backgroundTint="@android:color/white"
           android:textColor="#6BA93A"
+          android:backgroundTint="@android:color/white"
           />
 
       <Button
           android:id="@+id/button_register"
           android:layout_width="168dp"
           android:layout_height="53dp"
-          android:layout_marginLeft="10dp"
+          android:layout_marginLeft="2.5dp"
           android:layout_gravity="bottom"
-          android:backgroundTint="#6BA93A"
+          android:layout_marginBottom="10dp"
+          android:text="Register"
           android:textColor="@android:color/white"
-          android:text="Register" />
+          android:backgroundTint="#6BA93A"
+           />
+
       </LinearLayout>
 
   </LinearLayout>
