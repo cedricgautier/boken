@@ -46,6 +46,18 @@
           android:layout_margin="10dp"
           android:gravity="center">
 
+          <Button
+          android:id="@+id/button_register"
+          android:layout_width="168dp"
+          android:layout_height="53dp"
+          android:layout_marginStart="2.5dp"
+          android:layout_gravity="bottom"
+          android:layout_marginBottom="10dp"
+          android:text="@string/register"
+          android:textColor="#6BA93A"
+          android:backgroundTint="@android:color/white"
+          tools:ignore="ButtonStyle" />
+
       <Button
           android:id="@+id/button_login"
           android:layout_width="168dp"
@@ -54,21 +66,11 @@
           android:layout_gravity="bottom"
           android:layout_marginBottom="10dp"
           android:text="@string/log_in"
-          android:textColor="#6BA93A"
-          android:backgroundTint="@android:color/white"
-          tools:ignore="ButtonStyle" />
-
-      <Button
-          android:id="@+id/button_register"
-          android:layout_width="168dp"
-          android:layout_height="53dp"
-          android:layout_marginStart="2.5dp"
-          android:layout_gravity="bottom"
-          android:layout_marginBottom="10dp"
-          android:text="@string/register"
           android:textColor="@android:color/white"
           android:backgroundTint="#6BA93A"
           tools:ignore="ButtonStyle" />
+
+
 
       </LinearLayout>
   </LinearLayout>
