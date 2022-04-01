@@ -30,17 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed () {
-        quit();
-    }
-
-    public void quit() {
-        new AlertDialog.Builder(MainActivity.this)
-                .setTitle("Do you want to Quit")
-                .setPositiveButton("Yes", (dialog, which) -> finish())
-                .setNegativeButton("No", (dialog, which) -> {
-                })
-                .setCancelable(false)
-                .show();
+        finish(); //When on main activity, if back button pressed the app will quit.
     }
 
 }
