@@ -3,4 +3,8 @@
     <string name="app_name_logo">Boken Logo</string>
     <string name="log_in">Login</string>
     <string name="register">Register</string>
+    <string name="account_example">john.doe@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="password_hidden">**********</string>
+
 </resources>
