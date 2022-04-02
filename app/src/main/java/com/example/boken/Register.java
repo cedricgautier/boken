@@ -29,6 +29,17 @@ public class Register extends AppCompatActivity {
         createAccount(login, password);
     }
 
+    // [START on_start_check_user]
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            currentUser.reload();
+        }
+    }
+
     
     protected String passwordChecker() {
         if (!passwordConfirm.equals(password)) {
@@ -68,7 +79,7 @@ public class Register extends AppCompatActivity {
 
     private static final String TAG = "EmailPassword";
     private void updateUI(FirebaseUser user) {}
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
     EditText loginEmail = findViewById(R.id.login_email);
     EditText loginPassword = findViewById(R.id.login_password);

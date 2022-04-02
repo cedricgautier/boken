@@ -85,6 +85,7 @@
         </EditText>
 
         <Button
+            android:id="@+id/b_register_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -92,7 +93,6 @@
             android:backgroundTint="@color/black"
             android:fontFamily="@font/comfortaa"
             >
-
         </Button>
 
     </LinearLayout>
