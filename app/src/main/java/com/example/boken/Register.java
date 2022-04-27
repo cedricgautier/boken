@@ -1,5 +1,6 @@
 package com.example.boken;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -17,16 +18,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private String TAG = "Register";
-
+    private static final String TAG = "Register";
     private void updateUI(FirebaseUser user) {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        EditText mail = findViewById(R.id.login_email);
+        EditText mail = findViewById(R.id.register_email);
         Button btn_next = findViewById(R.id.b_register_next);
 
         mAuth = FirebaseAuth.getInstance();
@@ -34,7 +33,8 @@ public class Register extends AppCompatActivity {
             String correctPassword = checkPassword();
             String email = mail.getText().toString();
             createAccount(email,correctPassword);
-
+            Intent login_page = new Intent(Register.this, Login.class);
+            startActivity(login_page);
         });
     }
 
@@ -49,8 +49,8 @@ public class Register extends AppCompatActivity {
 
 
     private String checkPassword(){
-        EditText pass = findViewById(R.id.login_password);
-        EditText passConfirm = findViewById(R.id.login_password_confirm);
+        EditText pass = findViewById(R.id.register_password);
+        EditText passConfirm = findViewById(R.id.register_password_confirm);
         String password = pass.getText().toString();
         String passwordConfirm = passConfirm.getText().toString();
         
@@ -88,6 +88,8 @@ public class Register extends AppCompatActivity {
                 });
         // [END create_user_with_email]
     }
+
+
 
 
 
