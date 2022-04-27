@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="b_register_next" type="id" />
+    <item name="b_login_next" type="id" />
+    <item name="register_email" type="id"/>
+    <item name="register_password" type="id"/>
+    <item name="login_email" type="id"/>
+    <item name="login_password" type="id"/>
+    <item name="button_register" type="id"/>
+    <item name="button_login" type="id"/>
+    <item name="register_password_confirm" type="id"/>
+</resources>
