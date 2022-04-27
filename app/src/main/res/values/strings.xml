@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Boken</string>
     <string name="app_name_logo">Boken Logo</string>
@@ -8,5 +9,4 @@
     <string name="password">Password</string>
     <string name="password_hidden">**********</string>
     <string name="confirm_password">Confirm Password</string>
-
 </resources>

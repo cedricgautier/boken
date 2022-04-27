@@ -1,12 +1,13 @@
 package com.example.boken;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -15,78 +16,80 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
+    private FirebaseAuth mAuth;
+    private String TAG = "Register";
+
+    private void updateUI(FirebaseUser user) {}
 
     @Override
-    // This is the code that is executed when the activity is created.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        EditText mail = findViewById(R.id.login_email);
+        Button btn_next = findViewById(R.id.b_register_next);
+
         mAuth = FirebaseAuth.getInstance();
-        password = passwordChecker();
-        if (password == null){
-            Log.d(TAG, "onCreate: Password False");
-        }
-        createAccount(login, password);
+        btn_next.setOnClickListener(view -> {
+            String correctPassword = checkPassword();
+            String email = mail.getText().toString();
+            createAccount(email,correctPassword);
+
+        });
     }
 
-    // [START on_start_check_user]
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            currentUser.reload();
-        }
+        updateUI(currentUser);
     }
 
-    
-    protected String passwordChecker() {
-        if (!passwordConfirm.equals(password)) {
-            Toast.makeText(this, "Your Password is invalid", Toast.LENGTH_SHORT).show();
-        } else {
+
+
+    private String checkPassword(){
+        EditText pass = findViewById(R.id.login_password);
+        EditText passConfirm = findViewById(R.id.login_password_confirm);
+        String password = pass.getText().toString();
+        String passwordConfirm = passConfirm.getText().toString();
+        
+        if (passwordConfirm.equals(password)){
+            Log.d(TAG, "checkPassword: true");
             password = passwordConfirm;
             return password;
         }
-        return password;
+        else{
+            Log.d(TAG, "checkPassword: false");
+            Toast.makeText(Register.this, "Password is incorrect", Toast.LENGTH_SHORT).show();
+        }
+        return "";
     }
-
-
-    /**
-     * Create a new user with the email and password
-     * 
-     * @param login The email address of the user.
-     * @param password The password that the user will enter to create their account.
-     */
-    private void createAccount(String login, String password) {
-        mAuth.createUserWithEmailAndPassword(login, password)
+    private void createAccount(String email, String password) {
+        // [START create_user_with_email]
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+                            Toast.makeText(Register.this, "Auth True", Toast.LENGTH_SHORT).show();
                         } else {
-                            Log.d(TAG, "createUserWithEmail:failure");
-                            Toast.makeText(Register.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
+                            // If sign in fails, display a message to the user.
+                            Log.e(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(Register.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
                     }
                 });
+        // [END create_user_with_email]
     }
 
 
-    private static final String TAG = "EmailPassword";
-    private void updateUI(FirebaseUser user) {}
-    FirebaseAuth mAuth;
 
-    EditText loginEmail = findViewById(R.id.login_email);
-    EditText loginPassword = findViewById(R.id.login_password);
-    EditText loginPasswordConfirm = findViewById(R.id.login_password_confirm);
-
-    String login = loginEmail.getText().toString();
-    String password = loginPassword.getText().toString();
-    String passwordConfirm = loginPasswordConfirm.getText().toString();
 
 }
