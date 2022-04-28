@@ -100,7 +100,7 @@
         </EditText>
 
         <Button
-            android:id="@+id/b_login_next"
+            android:id="@+id/b_account_creation_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"

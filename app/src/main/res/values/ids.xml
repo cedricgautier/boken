@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="b_register_next" type="id" />
+    <item name="b_account_creation_next" type="id" />
     <item name="b_login_next" type="id" />
     <item name="register_email" type="id"/>
     <item name="register_password" type="id"/>
