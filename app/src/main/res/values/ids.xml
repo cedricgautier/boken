@@ -9,4 +9,7 @@
     <item name="button_register" type="id"/>
     <item name="button_login" type="id"/>
     <item name="register_password_confirm" type="id"/>
+    <item name="register_name" type="id"/>
+    <item name="register_lastname" type="id"/>
+    <item name="register_phone_number" type="id"/>
 </resources>
