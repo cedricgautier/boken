@@ -45,6 +45,7 @@ Boken - A booking app for your vacation. An app to easily book a place for your 
 * [JAVA](https://docs.oracle.com/en/java/)
 * [Android Studio IDE](https://developer.android.com/studio)
 * [Firebase Authentication](https://firebase.google.com/products/auth)
+* [Firebase Database](https://firebase.google.com/products/realtime-database)
 
 
 
@@ -53,9 +54,20 @@ Boken - A booking app for your vacation. An app to easily book a place for your 
 
 ### Installation
 1. Download the APK to your Android Mobile Device
---> [Link to Download APK](https:google.com)
+--> [Link to Download APK](https://google.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Features:
+Search for a property
+Show properties on a map
+Make a reservation as a customer
+Retrieve arrival and departure information
+Messaging between client and home owners
+Register one or more properties for home owners
+Manage reservation requests for a property
+Leave a review on a property from a customer
 
 <!-- ACKNOWLEDGMENTS -->
 <!-- ## Acknowledgments -->
