@@ -60,14 +60,14 @@ Boken - A booking app for your vacation. An app to easily book a place for your 
 
 
 ### Features:
-Search for a property
-Show properties on a map
-Make a reservation as a customer
-Retrieve arrival and departure information
-Messaging between client and home owners
-Register one or more properties for home owners
-Manage reservation requests for a property
-Leave a review on a property from a customer
+* [Search for a property]
+* [Show properties on a map]
+* [Make a reservation as a customer]
+* [Retrieve arrival and departure information]
+* [Messaging between client and home owners]
+* [Register one or more properties for home owners]
+* [Manage reservation requests for a property]
+* [Leave a review on a property from a customer]
 
 <!-- ACKNOWLEDGMENTS -->
 <!-- ## Acknowledgments -->
