@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ced/AndroidStudioProjects/boken/app/src/main/res/layout/activity_account_creation.xml" value="0.33" />
+        <entry key="..\:/Users/Ced/AndroidStudioProjects/boken/app/src/main/res/layout/activity_register.xml" value="0.1598731884057971" />
         <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.233" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/boken_logo.xml" value="0.25" />
