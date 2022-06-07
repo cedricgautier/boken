@@ -1,5 +1,6 @@
 package com.example.boken;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -10,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AccountCreation extends AppCompatActivity {
     private static final String TAG = "AccountCreation";
@@ -37,20 +40,29 @@ public class AccountCreation extends AppCompatActivity {
 
 
         btn_next.setOnClickListener(view -> {
-            String firstname = f_name.getText().toString();
-            String lastname = l_name.getText().toString();
-            String phone_number = p_number.getText().toString();
-            String email = null;
-
-            if (currentFirebaseUser != null) {
-                email = currentFirebaseUser.getEmail();
-            }
-            User user = new User(firstname, lastname,phone_number,email);
-            Toast.makeText(this, String.join(" ",user.firstname , user.lastname, user.phone, user.email), Toast.LENGTH_SHORT).show();
-
+            sendUserToDatabase(currentFirebaseUser, f_name, l_name, p_number);
+            Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show();
+            Intent homepage = new Intent(AccountCreation.this,Homepage.class);
+            startActivity(homepage);
         });
 
+    }
 
+    public void sendUserToDatabase(FirebaseUser currentFirebaseUser, EditText f_name, EditText l_name, EditText p_number){
+        String firstname = f_name.getText().toString();
+        String lastname = l_name.getText().toString();
+        String phone_number = p_number.getText().toString();
+        String email = null;
+        String uid = null;
+
+        if (currentFirebaseUser != null) {
+            email = currentFirebaseUser.getEmail();
+            uid = currentFirebaseUser.getUid();
+        }
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://boken-c2118-default-rtdb.europe-west1.firebasedatabase.app");
+        DatabaseReference myRef = database.getReference("/Users/"+uid);
+        User user = new User(uid,firstname, lastname,phone_number,email);
+        myRef.setValue(user); // Sends values to Database
     }
 
 
