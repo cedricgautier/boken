@@ -32,7 +32,8 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:background="@android:color/transparent"
-                android:drawableStart="@drawable/boken_navbar" />
+                android:drawableStart="@drawable/boken_navbar"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/homepage_search_button"
@@ -42,7 +43,8 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:background="@android:color/transparent"
-                android:drawableStart="@drawable/search_icon" />
+                android:drawableStart="@drawable/search_icon"
+                style="?android:attr/buttonBarButtonStyle" />
             <Button
                 android:id="@+id/homepage_messages_button"
                 android:layout_width="40dp"
@@ -51,7 +53,8 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:background="@android:color/transparent"
-                android:drawableStart="@drawable/message_icon" />
+                android:drawableStart="@drawable/message_icon"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/homepage_profile_button"
@@ -61,7 +64,8 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginRight="32dp"
                 android:background="@android:color/transparent"
-                android:drawableStart="@drawable/user_icon" />
+                android:drawableStart="@drawable/user_icon"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

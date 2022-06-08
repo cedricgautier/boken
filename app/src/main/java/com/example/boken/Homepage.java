@@ -37,6 +37,10 @@ public class Homepage extends AppCompatActivity {
             startActivity(profile_page);
         });
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
