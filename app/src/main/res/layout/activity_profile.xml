@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="left"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginBottom="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_information"
+            android:textSize="34sp"
+            android:fontFamily="@font/comfortaa"
+            android:textColor="@color/black"
+            android:layout_gravity="top"
+            android:layout_marginBottom="14dp"
+            >
+        </TextView>
+
+
+        <TextView
+            android:fontFamily="@font/comfortaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_black"
+            android:id="@+id/profile_firstname"
+            android:padding="5dp"
+            android:layout_marginBottom="7dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:autofillHints="">
+        </TextView>
+
+        <TextView
+            android:fontFamily="@font/comfortaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_black"
+            android:id="@+id/profile_lastname"
+            android:padding="5dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <TextView
+            android:fontFamily="@font/comfortaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_black"
+            android:id="@+id/profile_email"
+            android:padding="5dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <TextView
+            android:fontFamily="@font/comfortaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_black"
+            android:id="@+id/profile_phone_number"
+            android:padding="5dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/edit"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/comfortaa"
+            android:id="@+id/button_edit_profile"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2.5dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:text="@string/logout"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F13C3C"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

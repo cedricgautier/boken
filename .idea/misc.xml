@@ -6,12 +6,19 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.233" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/boken_logo.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/boken_navbar.xml" value="0.238" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.233" />
+        <entry key="app/src/main/res/drawable/message_icon.xml" value="0.239" />
         <entry key="app/src/main/res/drawable/rectangle_black.xml" value="0.233" />
-        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/drawable/search_icon.xml" value="0.239" />
+        <entry key="app/src/main/res/drawable/user_icon.xml" value="0.239" />
+        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18523712158203123" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_messages.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.30891418457031244" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.233" />
       </map>

@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".Messages"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Homepage"
             android:exported="false" />
         <activity
