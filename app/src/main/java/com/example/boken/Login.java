@@ -1,5 +1,6 @@
 package com.example.boken;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -28,7 +29,6 @@ public class Login extends AppCompatActivity {
 
         EditText pass = findViewById(R.id.login_password);
         EditText mail = findViewById(R.id.login_email);
-
         Button btn_next = findViewById(R.id.b_login_next);
 
         // Initialize Firebase Auth
@@ -38,8 +38,6 @@ public class Login extends AppCompatActivity {
             String email = mail.getText().toString();
             signIn(email,password);
         });
-
-
 
     }
 
@@ -63,7 +61,8 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "Authentication Successful",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(user);
-
+                            Intent account_creation = new Intent(Login.this, AccountCreation.class);
+                            startActivity(account_creation);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
