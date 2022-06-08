@@ -63,6 +63,7 @@ public class AccountCreation extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("/Users/"+uid);
         User user = new User(uid,firstname, lastname,phone_number,email);
         myRef.setValue(user); // Sends values to Database
+
     }
 
 
